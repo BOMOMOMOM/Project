@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+
+	cout << "Калькулятор!\n\n\n";
+
+	cout << "Выберите действие: ";
+	char op;
+	cin >> op;
+
+	if (op == '%') {
+
+		int n1;
+		int n2;
+		cout << "Введите первое число: ";
+		cin >> n1;
+		cout << "Введите Второе число: ";
+		cin >> n2;
+		int n3;
+
+		if (n2 == 0) {
+
+			cout << "На 0 делить нельзя!!!";
+
+		}
+		else {
+
+			n3 = n1 % n2;
+			cout << "Ваш ответ: " << n3;
+
+		}
+
+	}
+	else {
+		double num3;
+		cout << "Введите первое число: ";
+		double num1;
+		cin >> num1;
+
+		cout << "Введите второе число: ";
+		double num2;
+		cin >> num2;
+
+		if (op == '+') {
+
+			num3 = num1 + num2;
+			cout << "Ваш ответ: " << num3;
+
+		}
+
+		else if (op == '-') {
+
+			num3 = num1 - num2;
+			cout << "Ваш ответ: " << num3;
+
+		}
+
+		else if (op == '*') {
+
+			num3 = num1 * num2;
+			cout << "Ваш ответ: " << num3;
+
+		}
+
+		else if (op == '/') {
+
+			if (num2 == 0) {
+
+				cout << "На 0 делить нельзя!!!";
+
+			}
+			else {
+
+				num3 = num1 / num2;
+				cout << "Ваш ответ: " << num3;
+
+			}
+
+		}
+	}
+
+	int _;
+	cin >> _;
+	return 0;
+}

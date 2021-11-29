@@ -1,0 +1,112 @@
+#include <iostream>
+using namespace std;
+
+void text() {
+	system("cls");
+}
+void colourBackground() {
+	system("color 90");
+	cout << "Я покрасил";
+}
+void colourText() {
+	system("color 03");
+	cout << "Я покрасил";
+}
+void sizeInt() {
+	cout << "Размер INT - " << sizeof(int) << "б";
+}
+void sizeChar() {
+	cout << "Размер CHAR - " << sizeof(char) << "б";
+}
+void sizeDouble() {
+	cout << "Размер DOUBLE - " << sizeof(double) << "б";
+}
+void sizeFloat() {
+	cout << "Размер FLOAT - " << sizeof(float) << "б";
+}
+void sizeBool() {
+	cout << "Размер BOOL - " << sizeof(bool) << "б";
+}
+void message() {
+	cout << "Привет я функция!";
+}
+void square() {
+	char texture = '#';
+	int size = 5;
+	for (int x = 0; x < size; x++) {
+		for (int y = 0; y < size; y++) {
+			cout << texture << " ";
+		}
+		cout << "\n";
+	}
+}
+void Error() {
+	cout << "Такой функции нет.";
+}
+
+int main() {
+	setlocale(0, "");
+	cout << "Программа - \"Функции\"\n\n";
+	cout << "[1] Очищение консоли\n";
+	cout << "[2] Изменить цвет фона\n";
+	cout << "[3] Изменить цвет текста\n";
+	cout << "[4] Вывод размера типа данных INT\n";
+	cout << "[5] Вывод размера типа данных CHAR\n";
+	cout << "[6] Вывод размера типа данных DOUBLE\n";
+	cout << "[7] Вывод размера типа данных FLOAT\n";
+	cout << "[8] Вывод размера типа данных BOOL\n";
+	cout << "[9] Вывод сообщения \"Привет я функция\"\n";
+	cout << "[10] Вывод квадрата 5х5\n\n";
+	cout << "[+] Ввод: ";
+	int x;
+	cin >> x;
+	system("cls");
+	switch (x) {
+	case 1: {
+		text();
+		break;
+	}
+	case 2: {
+		colourBackground();
+		break;
+	}
+	case 3: {
+		colourText();
+		break;
+	}
+	case 4: {
+		sizeInt();
+		break;
+	}
+	case 5: {
+		sizeChar();
+		break;
+	}
+	case 6: {
+		sizeDouble();
+		break;
+	}
+	case 7: {
+		sizeFloat();
+		break;
+	}
+	case 8: {
+		sizeBool();
+		break;
+	}
+	case 9: {
+		message();
+		break;
+	}
+	case 10: {
+		square();
+		break;
+	}
+	default: {
+		Error();
+		break;
+	}
+	}
+	int _; cin >> _;
+	return 0;
+}
